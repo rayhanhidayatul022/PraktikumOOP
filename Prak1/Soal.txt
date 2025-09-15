@@ -1,0 +1,152 @@
+##SOAL 1
+Hello World
+Buatlah sebuah program bernama Main.java yang jika dijalankan melakukan print "Hello World" yang diakhiri dengan new line.
+
+
+
+
+##SOAL 2
+Penyakit Gila Balala
+Deskripsi
+Tuan Bil dan temannya Tuan Mask sedang mengidap penyakit gila Balala. Setiap harinya mereka pasti bermain Balala pada ponsel mereka. Bagi yang tidak tahu, Balala adalah permainan kartu layaknya poker atau capsa. Tujuan permainan tersebut adalah mendapatkan kartu dengan set terbaik.
+
+Pada setiap giliran, Tuan Bil dan Tuan Jip akan mendapatkan 5 kartu yang akan diadu. Jika terdapat set yang lebih kuat, maka set yang lebih kuat adalah pemenangnya. Namun, jika set yang dimiliki sama, maka hasil permainan adalah seri.
+
+Untuk memudah pengerjaan, hanya terdapat 4 set kartu yang mungkin, dengan urutan berikut (terkuat -> terlemah):
+
+(RANK 3) Royal Flush: terdapat 5 kartu yang memiliki paket sama dan angka 10, Jack, Queen, King, dan As.
+(RANK 2) Full House: terdapat 3 kartu dengan angka yang sama dan 2 kartu lainnya dengan angka yang sama juga.
+(RANK 1) Flush: terdapat 5 kartu dengan paket yang sama.
+(RANK 0) High Card: tidak dapat membentuk set apapun
+Paket adalah simbol pada kartu, yaitu Tempe, Keriting, Hati, dan Sekop. Sedangkan angka pada kartu terdiri dari As, 2, 3, 4, 5, 6, 7, 8, 9, Ten, Jack, Queen, dan King.
+
+Diberikan file Main.java untuk membantu pengerjaan!
+
+Format Masukan
+Input yang akan diberikan adalah 10 baris, yaitu:
+
+Baris 1-5, 5 buah kartu milik Tuan Bil
+Baris 6-10, 5 buah kartu milik Tuan Mask
+Penulisan kartu berbentuk , sehingga KK adalah Keriting King, T2 adalah Tempe Dua atau HT adalah Hati Sepuluh.
+
+Format Keluaran
+Baris 1 berisi pemenang dari permainan, dapat berupa 'Tuan Bil', 'Tuan Mask' dan 'Seri' Baris 2 merupakan rangking dari set pemenang
+
+Note
+Untuk mendapatkan karakter pertama atau kedua dari sebuah string dapat menggunakan metode charAt(int). Contohnya, kartu.charAt(0) akan mendapatkan karakter pertama (yaitu paket) dari string.
+Array dalam Java berupa statik. Oleh karena itu, pengaksesan dan pemasukan hanya bisa dilakukan melalui indeks. Contohnya cards[0] = "K2"
+Membuat array dengan nilai awal dalam Java dapat dilakukan sebagai berikut int[] contoh = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};. Array of int dengan nama contoh akan berisi 13 nilai 0.
+Contoh
+Contoh 1
+Masukkan:
+HK
+HT
+HJ
+HQ
+HA
+T2
+TK
+T8
+T5
+TA
+Keluaran:
+Tuan Bil
+3
+Penjelasan
+Tuan Bil memiliki kartu HK, HT, HJ, HQ, HA. Karena seluruh kartu memiliki paket yang sama (hati) dan memiliki angka dari 10 sampai As maka terdapat set Royal Flush (rank 3).
+
+Tuan Mask memiliki kartu T2, TK, T8, T5, TA. Karena seluruth kartu memiliki paket yang sama (tempe), maka terdapat set Flush (rank 1).
+
+Karena Royal Flush memiliki ranking yang lebih tinggi dari Flush maka pemenangnya adalah Tuan Bil.
+
+Contoh 2
+Masukkan:
+HK
+HT
+T2
+KK
+S2
+H2
+KA
+TA
+T2
+SA
+Keluaran:
+Tuan Mask
+2
+Penjelasan
+Tuan Bil memiliki kartu HK, HT, T2, KK, S2. Karena tidak terdapat paket yang sama ataupun set lain, maka ia memiliki set High Card (rank 0).
+
+Tuan Mask memiliki kartu H2, KA, TA, T2, SA. Karena terdapat 3 kartu dengan angka As dan 2 kartu dengan angka 2, maka ia memiliki set Full House (rank 2).
+
+Karena Full House memiliki ranking yang lebih tinggi dari High Card maka pemenangnya adalah Tuan Mask.
+
+Contoh 3
+Masukkan:
+HK
+HT
+T2
+KK
+S2
+H2
+KT
+TA
+T2
+SA
+Keluaran:
+Seri
+0
+Penjelasan
+Tuan Bil memiliki kartu HK, HT, T2, KK, S2. Karena tidak terdapat paket yang sama ataupun set lain, maka ia memiliki set High Card (rank 0).
+
+Tuan Mask memiliki kartu H2, KT, TA, T2, SA. Karena tidak terdapat paket yang sama ataupun set lain, maka ia memiliki set High Card (rank 0).
+
+Karena keduanya memiliki set yang sama, maka hasil permainan adalah Seri.
+
+
+
+##SOAL 3
+Permainan Kartu Balala
+Buat suatu program Java untuk menghitung skor untuk permainan kartu Balala.
+
+Skor didapatkan dengan menjumlahkan semua nilai kartu dan mengkalinya dengan multiplier
+
+Pemain dapat menggunakan kartu booster untuk mengkali multiplier yang mereka miliki. Dalam permainan ini terdapat dua jenis kartu booster :
+
+Kartu booster pertama akan mengkali multiplier dengan 2
+Kartu booster kedua akan mengkali multiplier dengan 3
+Apabila pemain memilih kartu booster yang lain maka nilai multiplier tidak akan berubah.
+
+Asumsi
+Asumsikan seluruh angka merupakan integer positif.
+
+Format Masukan
+Baris pertama akan berisi 5 angka yang merupakan nilai kartu. Nilai kartu merupakan integer dalam rentang nilai 1 sampai 11
+Baris kedua akan berisi nilai multiplier yang merupakan angka integer
+Baris ketiga merupakan jenis kartu booster yang dipilih pemain. Pilihan kartu booster digambarkan dengan nilai integer, nilai 1 berarti pengguna memilih kartu booster pertama dan nilai 2 berarti pengguna memilih kartu booster kedua. Nilai selain 1 dan 2 dapat muncul, tetapi tidak mempengaruhi multiplier
+Format Keluaran
+Nilai integer hasil skor yang didapatkan pemain
+
+Contoh Masukan 1
+1 2 3 4 5
+10
+1
+
+Contoh Keluaran 1
+300
+
+Penjelasan
+(1 + 2 + 3 + 4 + 5) * (10 * 2) = 300 Kartu booster yang pertama mengkali multiplier dengan 2
+
+Contoh Masukan 2
+2 2 2 2 2
+15
+4
+
+Contoh Keluaran 2
+150
+
+Penjelasan
+(2 + 2 + 2 + 2 + 2) * 15 = 150 Kartu booster selain pertama dan kedua tidak akan mengubah multiplier
+
+Submit file Main.java
